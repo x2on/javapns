@@ -249,7 +249,7 @@ public abstract class ConnectionToAppleServer {
 		}
 
 		/* We check for Connection Established because our proxy returns HTTP/1.1 instead of 1.0 */
-		if (replyStr.toLowerCase().indexOf("200 connection established") == -1) {
+		if (replyStr.toLowerCase().indexOf("200") == -1) {
 			throw new IOException("Unable to tunnel through. Proxy returns \"" + replyStr + "\"");
 		}
 
