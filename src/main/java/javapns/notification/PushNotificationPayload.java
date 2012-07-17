@@ -309,7 +309,7 @@ public class PushNotificationPayload extends Payload {
 	 * @throws JSONException if the custom alert cannot be added because a simple alert already exists
 	 */
 	public void addCustomAlertActionLocKey(String actionLocKey) throws JSONException {
-		Object value = actionLocKey != null ? actionLocKey : new JSONNull();
+		Object value = actionLocKey != null ? actionLocKey : JSONObject.NULL;
 		put("action-loc-key", value, getOrAddCustomAlert(), false);
 	}
 
